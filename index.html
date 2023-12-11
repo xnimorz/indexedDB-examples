@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h1>Step by step examples for IndexedDB article</h1>
+        <div class="group">
+          <button id="create-db">1. Create DB (v1)</button>
+          <button id="add-addresses">2. Add addresses storage (v2)</button>
+          <button id="fill-db">3. Fill IDB</button>
+          <button id="multi-entry">4. Fetch people with UK citizenship</button>
+          <button id="commit-example">
+            5. Read-write transaction with commit
+          </button>
+          <button id="abort-example">Read-write transaction with abort</button>
+          <button id="concurrentWrite">Concurrent writes</button>
+          <button id="concurrentRead">Concurrent reads</button>
+          <button id="concurrentReadWrite">Concurrent read & write</button>
+          <button id="concurrentWriteDifferentObjectStores">
+            Concurrent writes to different object stores
+          </button>
+          <button id="keepTransactionAlive5sec">
+            Keep transaction alive for 5 seconds
+          </button>
+          <button id="keepTransactionAliveWithPromiseLoop">
+            Keep transaction alive using microtasks (2 sec)
+          </button>
+          <button id="performRequestInSetTimeout">
+            Perform transaction in setTimeout
+          </button>
+          <button id="durabilityCompare">Relaxed vs strict durability</button>
+          <button id="orderExample">ObjectStore operations ordering</button>
+          <button id="cursorExample">Cursor example</button>
+        </div>
+        <div id="console" class="console"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
