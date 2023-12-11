@@ -9,6 +9,13 @@ export async function keepTransactionAliveWithPromiseLoop() {
   const startTime = Date.now();
   function cyclePromiseLoop(): Promise<void> {
     if (Date.now() - startTime > 2000) {
+      txn.objectStore("name-store").count().onsuccess = (event) => {
+        // @ts-expect-error
+        const result = event.target.result;
+        LOG`IDBRequest ended after ${
+          (Date.now() - startTime) / 1000
+        } sec. Result: ${result}`;
+      };
       txn.commit();
       return Promise.resolve();
     }
