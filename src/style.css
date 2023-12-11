@@ -37,10 +37,8 @@ h1 {
 .console {
   text-align: left;
   white-space: pre;
-  max-width: 100%;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 800px;
+  overflow: auto;
 }
 
 .group {
